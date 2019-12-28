@@ -1,17 +1,17 @@
 
-###build images with php7.3.6
+### build images with php7.3.6
 
 ```
 docker build -f Dockerfile_php7 -t 'lnmp:php7' .
 ```
 
-###build images with php5.6.40
+### build images with php5.6.40
 
 ```
 docker build -f Dockerfile_php5 -t 'lnmp:php5' .
 ```
 
-###PS
+### PS
 ```
 RUN echo -e "0\n9\n1\n" |./install.sh lnmp
 ```
