@@ -1,0 +1,15 @@
+FROM centos
+MAINTAINER kingkangyu kingkangyu@163.com
+RUN yum -y install wget
+RUN wget http://soft.vpser.net/lnmp/lnmp1.6.tar.gz -cO lnmp1.6.tar.gz
+RUN tar zxf lnmp1.6.tar.gz
+WORKDIR /lnmp1.6
+RUN echo -e "0\n5\n1\n" |./install.sh lnmp
+WORKDIR /
+RUN rm -rf lnmp1.6
+RUN rm -rf lnmp1.6.tar.gz
+RUN yum clean all
+
+EXPOSE 80
+
+CMD lnmp start&/bin/bash
