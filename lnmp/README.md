@@ -13,6 +13,10 @@ docker build -f Dockerfile_php5 -t 'lnmp:php5' .
 
 ### open php log_error
 
+```
+docker exec -it container_name /bin/bash
+```
+
 php.ini
 
 ```
@@ -24,6 +28,11 @@ set
 log_errors = On
 error_log = /home/wwwlogs/php_errors.log
 error_reporting=E_ALL
+
+```
+run
+```
+lnmp restart
 ```
 
 ### PS
