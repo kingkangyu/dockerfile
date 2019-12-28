@@ -11,6 +11,21 @@ docker build -f Dockerfile_php7 -t 'lnmp:php7' .
 docker build -f Dockerfile_php5 -t 'lnmp:php5' .
 ```
 
+### open php log_error
+
+php.ini
+
+```
+vi /usr/local/php/etc/php.ini
+```
+
+set
+```
+log_errors = On
+error_log = /home/wwwlogs/php_errors.log
+error_reporting=E_ALL
+```
+
 ### PS
 ```
 RUN echo -e "0\n9\n1\n" |./install.sh lnmp
